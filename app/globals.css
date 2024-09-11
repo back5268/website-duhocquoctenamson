@@ -3,25 +3,50 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-color: #0FB2E5;
+  --blur-primary-color: #c2f1ff;
+  --light-primary-color: #8CEDFE;
+  --dark-primary-color: #088DB7;
+  --secondary-color: #3B475A;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  color: #3B475A;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@layer components {
+  .text-link {
+    @apply cursor-pointer text-nowrap hover:text-primary uppercase font-medium
+  }
+
+  .custom-input {
+    @apply appearance-none block w-full text-gray-700 border border-gray-700 rounded py-3 px-4 leading-tight focus:outline-none focus:border-dark-primary focus:border-2
+  }
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none; /* Ẩn icon mặc định */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white !important;
 }
