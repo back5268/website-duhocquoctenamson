@@ -11,7 +11,7 @@ export const DecorTitle = ({
 }: DecorTitleProps) => {
   return (
     <h4 className="relative text-xl font-semibold mb-4">
-      <div className="absolute h-8 w-8 -top-1 -left-10 -z-10">
+      <div className="absolute h-6 w-6 top-0 -left-8 -z-10">
         <Image src={href} alt="" fill className="object-contain" />
       </div>
       {title}

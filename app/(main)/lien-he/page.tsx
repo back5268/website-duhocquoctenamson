@@ -1,5 +1,5 @@
-import { Header } from "@/components/header";
-import { locations } from "@/constants";
+import { Header } from '@/components/header';
+import { locations } from '@/constants';
 
 const Page = () => {
   return (
@@ -10,21 +10,13 @@ const Page = () => {
           <div className="w-1/2 px-4">
             {locations.map(({ label, children }, index) => (
               <div key={index} className="max-w-[30rem] mb-8">
-                <h4 className="font-semibold text-dark-primary mb-4 border-b-2 pb-2">
-                  {label}
-                </h4>
+                <h4 className="font-semibold text-dark-primary mb-4 border-b-2 pb-2">{label}</h4>
                 {children.map(({ label, prefix, prefix2 }, iz) => (
                   <div key={iz} className="my-2">
                     <p className="flex items-center gap-4 ml-4">
-                      {prefix ? (
-                        <span className="font-bold text-dark-primary text-lg">
-                          {prefix}
-                        </span>
-                      ) : (
-                        ""
-                      )}{" "}
+                      {prefix ? <span className="font-bold text-dark-primary text-lg">{prefix}</span> : ''}{' '}
                       <span>
-                        {prefix2 ? <b>{prefix2}</b> : ""} {label}
+                        {prefix2 ? <b>{prefix2}</b> : ''} {label}
                       </span>
                     </p>
                   </div>
@@ -36,60 +28,32 @@ const Page = () => {
             <form className="w-full">
               <div className="flex flex-wrap mb-6">
                 <div className="w-full md:w-1/2 px-2">
-                  <input
-                    className="custom-input"
-                    id="name"
-                    placeholder="Họ tên"
-                  />
+                  <input className="custom-input" id="name" placeholder="Họ tên" />
                 </div>
                 <div className="w-full md:w-1/2 px-2">
-                  <input
-                    className="custom-input"
-                    id="phone"
-                    placeholder="Số điện thoại"
-                  />
+                  <input className="custom-input" id="phone" placeholder="Số điện thoại" />
                 </div>
               </div>
               <div className="flex flex-wrap mb-6">
                 <div className="w-full md:w-1/2 px-2">
-                  <input
-                    className="custom-input"
-                    id="address"
-                    placeholder="Địa chỉ"
-                  />
+                  <input className="custom-input" id="address" placeholder="Địa chỉ" />
                 </div>
                 <div className="w-full md:w-1/2 px-2">
-                  <input
-                    className="custom-input"
-                    id="email"
-                    placeholder="Email"
-                  />
+                  <input className="custom-input" id="email" placeholder="Email" />
                 </div>
               </div>
               <div className="flex flex-wrap mb-6">
                 <div className="w-full px-2">
-                  <input
-                    className="custom-input"
-                    id="title"
-                    placeholder="Chủ đề"
-                  />
+                  <input className="custom-input" id="title" placeholder="Chủ đề" />
                 </div>
               </div>
               <div className="flex flex-wrap mb-6">
                 <div className="w-full px-2">
-                  <textarea
-                    className="custom-input"
-                    id="content"
-                    placeholder="Nội dung"
-                    rows={6}
-                  />
+                  <textarea className="custom-input" id="content" placeholder="Nội dung" rows={6} />
                 </div>
               </div>
               <div className="flex justify-center">
-                <button
-                  className="relative bg-primary w-40 h-12 text-white uppercase rounded-lg font-semibold hover:bg-dark-primary"
-                  type="submit"
-                >
+                <button className="relative bg-primary w-40 h-12 text-white uppercase rounded-lg font-semibold hover:bg-dark-primary border-b-4 border-dark-primary" type="submit">
                   <div className="absolute border bg-primary opacity-50 rounded-lg top-1 right-6 w-28 h-10 animate-ping" />
                   Liên hệ ngay
                 </button>

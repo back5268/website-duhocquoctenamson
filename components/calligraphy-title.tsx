@@ -12,9 +12,9 @@ export const CalligraphyTitle = ({
   href,
 }: CalligraphyTitleProps) => {
   return (
-    <div className="relative">
-      <h3 className="text-2xl font-semibold mb-12 text-left">{title}</h3>
-      <div className="absolute h-12 w-20 -top-4 -left-8 -z-10">
+    <div className="relative w-fit">
+      <h3 className="text-2xl font-semibold mb-12 text-left pr-4">{title}</h3>
+      <div className="absolute h-12 w-20 -top-4 -left-6 -z-10">
         <Image
           src={
             position === "left"
@@ -26,7 +26,7 @@ export const CalligraphyTitle = ({
           className="object-contain"
         />
       </div>
-      <div className="absolute h-20 w-60 top-0 left-16 -z-10">
+      <div className="absolute h-24 w-full top-0 left-16 -z-10">
         <Image src={href} alt="" fill className="object-contain" />
       </div>
     </div>

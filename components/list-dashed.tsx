@@ -1,4 +1,4 @@
-export const ListDashed = ({ list }: { list: any[] }) => {
+export const ListDashed = ({ list }: { list: ((() => React.ReactElement) | string)[] }) => {
   return (
     <ul className="ml-4 list-disc leading-8">
       {list.map((item, index) => (

@@ -42,13 +42,6 @@ export const locations = [
   },
 ];
 
-export const japans = [
-  { label: "Du học tự túc", href: "#tu-tuc" },
-  { label: "Du học học bổng báo", href: "#hoc-bong-bao" },
-  { label: "Du học học bổng nhà hàng", href: "#hoc-bong-nha-hang" },
-  { label: "Du học học bổng điều dưỡng", href: "#hoc-bong-dieu-duong" },
-];
-
 export const items = [
   { href: "/", label: "Trang chủ" },
   { href: "/gioi-thieu", label: "Giới thiệu" },
@@ -63,80 +56,80 @@ export const items = [
 export const abroads = [
   {
     label: "Du học Nhật Bản - tự túc",
-    href: "/images/trang-chu/du-hoc-tu-tuc.png",
+    href: "/images/trang-chu/tu-tuc.png",
     to: "/du-hoc-nhat-ban#tu-tuc",
   },
   {
     label: "Du học Nhật bản - học bổng báo",
-    href: "/images/trang-chu/du-hoc-hoc-bong-bao.png",
+    href: "/images/trang-chu/hoc-bong-bao.png",
     to: "/du-hoc-nhat-ban#hoc-bong-bao",
   },
   {
     label: "Du học Nhật bản - học bổng nhà hàng",
-    href: "/images/trang-chu/du-hoc-hoc-bong-nha-hang.png",
+    href: "/images/trang-chu/hoc-bong-nha-hang.png",
     to: "/du-hoc-nhat-ban#hoc-bong-nha-hang",
   },
   {
     label: "Du học Nhật bản - học bổng điều dưỡng",
-    href: "/images/trang-chu/du-hoc-hoc-bong-dieu-duong.png",
+    href: "/images/trang-chu/hoc-bong-dieu-duong.png",
     to: "/du-hoc-nhat-ban#hoc-bong-dieu-duong",
   },
   {
     label: "Du học Hàn Quốc",
-    href: "/images/trang-chu/du-hoc-tieng-han.png",
-    to: "/du-hoc-han-quoc",
+    href: "/images/trang-chu/du-hoc-han-quoc.png",
+    to: "/du-hoc-han-quoc#visa-d4",
   },
   {
     label: "Du học Hàn Quốc - hệ đại học",
-    href: "/images/trang-chu/du-hoc-han-dai-hoc.png",
-    to: "/du-hoc-han-quoc",
+    href: "/images/trang-chu/he-dai-hoc.png",
+    to: "/du-hoc-han-quoc#visa-d2",
   },
 ];
 
 export const labors = [
   {
     label: "Xuất khẩu Nhật Bản",
-    href: "/images/trang-chu/xuat-khau-nhat-ban.png",
+    href: "/images/trang-chu/xuat-khau-nhat.png",
     to: "/xuat-khau-nhat-ban",
   },
   {
     label: "Xuất khẩu Hàn Quốc",
-    href: "/images/trang-chu/xuat-khau-han-quoc.png",
+    href: "/images/trang-chu/xuat-khau-han.png",
     to: "/xuat-khau-han-quoc",
   },
   {
     label: "Xuất khẩu CHLB Đức",
-    href: "/images/trang-chu/xuat-khau-han-quoc.png",
+    href: "/images/xuat-khau-chau-au/duc.png",
     to: "/xuat-khau-chau-au",
   },
   {
     label: "Xuất khẩu Liên Bang Nga",
-    href: "/images/trang-chu/xuat-khau-han-quoc.png",
+    href: "/images/xuat-khau-chau-au/nga.png",
     to: "/xuat-khau-chau-au",
   },
   {
     label: "Xuất khẩu Hungary",
-    href: "/images/trang-chu/xuat-khau-han-quoc.png",
+    href: "/images/xuat-khau-chau-au/hungary.png",
     to: "/xuat-khau-chau-au",
   },
   {
     label: "Xuất khẩu Cộng Hòa Séc",
-    href: "/images/trang-chu/xuat-khau-han-quoc.png",
+    href: "/images/xuat-khau-chau-au/sec.png",
     to: "/xuat-khau-chau-au",
   },
   {
     label: "Xuất khẩu Bulgaria",
-    href: "/images/trang-chu/xuat-khau-han-quoc.png",
+    href: "/images/xuat-khau-chau-au/bulgaria.png",
     to: "/xuat-khau-chau-au",
   },
   {
     label: "Xuất khẩu Hy Lạp",
-    href: "/images/trang-chu/xuat-khau-han-quoc.png",
+    href: "/images/xuat-khau-chau-au/hy-lap.png",
     to: "/xuat-khau-chau-au",
   },
   {
     label: "Xuất khẩu Singapore",
-    href: "/images/trang-chu/xuat-khau-han-quoc.png",
+    href: "/images/xuat-khau-chau-au/singapore.png",
     to: "/xuat-khau-chau-au",
   },
 ];

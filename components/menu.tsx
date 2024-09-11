@@ -1,7 +1,7 @@
-import { getMenu } from "@/lib/menu";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { SubMenu } from "./submenu";
+import { getMenu } from '@/lib/menu';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { SubMenu } from './submenu';
 
 export const Menu = () => {
   const pathname = usePathname();
@@ -14,10 +14,7 @@ export const Menu = () => {
           return (
             <li key={index} className="h-full flex items-center">
               {href ? (
-                <Link
-                  href={href}
-                  className={`text-link ${active ? "text-primary" : ""}`}
-                >
+                <Link href={href} className={`text-link ${active ? 'text-primary' : ''}`}>
                   {label}
                 </Link>
               ) : (

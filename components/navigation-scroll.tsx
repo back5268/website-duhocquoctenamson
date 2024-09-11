@@ -12,7 +12,7 @@ export const NavigationScroll = ({
   const pathname = usePathname();
 
   useEffect(() => {
-    let hash = window.location.hash;
+    const hash = window.location.hash;
     if (!hash)
       window.scrollTo({
         top: 0,

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 type CardProps = {
   title: string;
@@ -10,22 +10,20 @@ type CardProps = {
 
 export const Card = ({ title, href, price, note, time }: CardProps) => {
   return (
-    <div className="relative shadow p-4 cursor-pointer group">
-      <div className="w-full flex gap-4 bg-white">
-        <div className="relative h-60 w-full overflow-hidden">
-          <Image
-            src="/images/gioi-thieu1.png"
-            alt={title}
-            fill
-            className="object-contain transform transition-transform duration-500 group-hover:scale-110"
-          />
+    <div className="relative shadow-custom p-4 cursor-pointer group rounded-xl min-h-72 items-center flex">
+      <div className="absolute top-0 -left-60 h-32 w-full overflow-hidden rounded-lg z-[1] rotate-12">
+        <Image src={href + '-text.png'} alt={title} fill className="object-contain" />
+      </div>
+      <div className="w-full flex gap-4 bg-white overflow-hidden">
+        <div className="relative h-48 w-full overflow-hidden rounded-lg z-0">
+          <Image src={href + '.png'} alt={title} fill className="object-cover transform transition-transform duration-500 group-hover:scale-110 rounded-lg" />
         </div>
+
         <div className="flex flex-col gap-2 justify-center items-center w-full">
           <h3 className="uppercase font-semibold text-xl">{title}</h3>
           {price && (
             <p className="border border-primary rounded-lg p-2 text-center">
-              Chi phí:{" "}
-              <span className="font-semibold text-primary">{price}</span>
+              Chi phí: <span className="font-semibold text-primary">{price}</span>
               <br />
               {note && <span className="text-sm">{note}</span>}
             </p>
@@ -36,9 +34,10 @@ export const Card = ({ title, href, price, note, time }: CardProps) => {
               <br /> <span className="text font-semibold">{time}</span>
             </p>
           )}
-          <div className="uppercase mt-4 bg-primary p-2 px-4 rounded-lg text-white font-semibold">
+          <button className="relative uppercase mt-4 bg-primary h-10 w-28 flex items-center justify-center rounded-lg text-white font-semibold border-b-4 border-dark-primary">
+            <div className="absolute border bg-primary opacity-50 rounded-lg top-1 right-4 w-20 h-8 animate-ping" />
             Chi tiết
-          </div>
+          </button>
         </div>
       </div>
     </div>

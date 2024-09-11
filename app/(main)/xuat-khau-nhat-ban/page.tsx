@@ -4,73 +4,71 @@ import { ListDashed } from '@/components/list-dashed';
 import { Check } from 'lucide-react';
 import Image from 'next/image';
 
+const Cam = () => {
+  return (
+    <div className="absolute -top-12 right-0 max-w-fit mr-12">
+      <div className="bg-white rounded-2xl">
+        <h3 className="uppercase font-semibold text-2xl py-2 mb-4 border-b-2 border-dashed border-primary">Cam Kết</h3>
+        <div className="ml-4">
+          {['Tư Vấn Lộ Trình Rõ Ràng', 'Không Phát Sinh Thêm Chi Phí Ngoài', 'Đơn Hàng Uy Tín, Công Việc Ổn Định'].map((text, index) => (
+            <div key={index} className="flex gap-2 my-2 items-center">
+              <Check className="stroke-2 text-primary" />
+              <span className="font-medium">{text}</span>
+            </div>
+          ))}
+        </div>
+        <div className="absolute inset-y-0 -left-9 bg-primary w-8 rounded-full"></div>
+        <div className="absolute inset-y-0 -left-8 bg-white w-8 rounded-2xl"></div>
+      </div>
+    </div>
+  );
+};
+
 const Page = () => {
   return (
     <div className="container lg:w-9/12 mt-24">
-      <div className="flex flex-col gap-4 items-center justify-center w-full">
-        <div className="sticky top-20 w-full py-4 bg-white z-10">
-          <Header label="Xuất khẩu" hightlight="Nhật Bản" />
-        </div>
+      <div className="flex flex-col gap-12 items-center justify-center w-full">
+        <Header label="Xuất khẩu" hightlight="Nhật Bản" />
 
-        <div className="grid-1 grid grid-cols-2">
-          <div>
-            <div className="flex flex-col gap-8">
-              <div className="relative">
-                <h3 className="text-2xl font-semibold mb-12 text-left">1.1 diện thực tập sinh kỹ năng</h3>
-                <div className="absolute h-12 w-20 -top-4 -left-8 -z-10">
-                  <Image src="/images/decor/decor2.png" alt="" fill className="object-contain" />
-                </div>
-                <div className="absolute h-28 w-96 top-0 left-16 -z-10">
-                  <Image src="/images/xuat-khau-nhat/ky-nang.png" alt="" fill className="object-contain" />
-                </div>
-              </div>
-              <div className="leading-8">
-                <DecorTitle title="Điều kiện" />
-                <p className="font-semibold">Trình độ:</p>
-                <ListDashed
-                  list={[
-                    'Trên 18 tuổi',
-                    'Tốt nghiệp THPT',
-                    'Hoặc tốt nghiệp cấp 2, độ tuổi đến 35 với một số ngành nghề như: May, xây dựng ...',
-                    'Đảm bảo đủ sức khỏe và không mắc các bệnh mà chính phủ Nhật Bản không cho nhập cảnh như: viêm gan siêu vi B, HIV, mù màu và các bệnh truyền nhiễm khác, …'
-                  ]}
-                />
-                <p>
-                  <b>Đơn hàng tuyển dụng:</b> Cơ khí, Xây dựng, Điện tử, Chế biến thủy hải sản, Đóng gói, Nông nghiệp, Làm bánh,…
-                </p>
-                <p>
-                  <b>Thời gian tham gia:</b> 1 năm, 3 năm hoặc 5 năm
-                </p>
-              </div>
+        <div>
+          <div className="relative ml-8">
+            <h3 className="text-2xl font-semibold mb-12 text-left">1.1 diện thực tập sinh kỹ năng</h3>
+            <div className="absolute h-12 w-20 -top-4 -left-8 -z-10">
+              <Image src="/images/decor/decor2.png" alt="" fill className="object-contain" />
+            </div>
+            <div className="absolute h-32 w-96 top-0 left-16 -z-10">
+              <Image src="/images/xuat-khau-nhat/ky-nang.png" alt="" fill className="object-contain" />
             </div>
           </div>
-          <div className="flex flex-col w-full px-4">
-            <div className="relative max-w-fit ml-12 mt-32">
-              <div className="bg-white rounded-2xl">
-                <h3 className="uppercase font-semibold text-2xl py-2 mb-4 border-b-2 border-dashed border-primary">Cam Kết</h3>
-                <div className="ml-4">
-                  {['Tư Vấn Lộ Trình Rõ Ràng', 'Không Phát Sinh Thêm Chi Phí Ngoài', 'Đơn Hàng Uy Tín, Công Việc Ổn Định'].map((text, index) => (
-                    <div key={index} className="flex gap-2 my-2 items-center">
-                      <Check className="stroke-2 text-primary" />
-                      <span className="font-medium">{text}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="absolute inset-y-0 -left-9 bg-primary w-8 rounded-full"></div>
-              <div className="absolute inset-y-0 -left-8 bg-white w-8 rounded-2xl"></div>
+          <div className="relative grid grid-cols-2">
+            <div className="absolute top-32 -left-32 h-[600px] w-full overflow-hidden">
+              <Image src="/images/xuat-khau-nhat/2.png" alt="" fill className="object-contain" />
+            </div>
+            <div className="col-span-1"></div>
+            <div className="relative col-span-1 px-12 pt-16">
+              <Cam />
+              <DecorTitle title="Điều kiện" />
+              <p className="font-semibold">Trình độ:</p>
+              <ListDashed
+                list={[
+                  'Trên 18 tuổi',
+                  'Tốt nghiệp THPT',
+                  'Hoặc tốt nghiệp cấp 2, độ tuổi đến 35 với một số ngành nghề như: May, xây dựng ...',
+                  'Đảm bảo đủ sức khỏe và không mắc các bệnh mà chính phủ Nhật Bản không cho nhập cảnh như: viêm gan siêu vi B, HIV, mù màu và các bệnh truyền nhiễm khác, …'
+                ]}
+              />
+              <p className="mt-4">
+                <b>Đơn hàng tuyển dụng:</b> Cơ khí, Xây dựng, Điện tử, Chế biến thủy hải sản, Đóng gói, Nông nghiệp, Làm bánh,…
+              </p>
+              <p className="mt-4">
+                <b>Thời gian tham gia:</b> 1 năm, 3 năm hoặc 5 năm
+              </p>
             </div>
           </div>
         </div>
 
-        <div className="w-full flex justify-start">
-          <div className="relative h-[600px] w-full overflow-hidden">
-            <Image src="/images/xuat-khau-nhat/2.png" alt="" fill className="object-contain" />
-          </div>
-        </div>
-
-        <div className="grid-1 grid grid-cols-2 mt-32">
-          <div>
+        <div className="grid-1 grid grid-cols-2 mt-96">
+          <div className='col-span-1 px-12'>
             <div className="flex flex-col gap-8">
               <div className="relative">
                 <h3 className="text-2xl font-semibold mb-12 text-left">1.2 diện Kỹ sư</h3>
@@ -113,7 +111,7 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className='col-span-1 px-12'>
             <div className="flex flex-col gap-8">
               <div className="relative">
                 <h3 className="text-2xl font-semibold mb-12 text-left">1.3 diện Tokutei</h3>

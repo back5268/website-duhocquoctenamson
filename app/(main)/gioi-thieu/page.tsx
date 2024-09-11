@@ -41,7 +41,7 @@ const Page = () => {
                   Phương Châm
                 </h3>
                 <p>
-                  Với phương châm <b>"Chất lượng tạo niềm tin"</b> chúng tôi tự
+                  Với phương châm <b>&quotChất lượng tạo niềm tin&quot</b> chúng tôi tự
                   hào vì đã hỗ trợ được 100% quý phụ huynh, học viên và khách
                   hàng đến với Nam Sơn. Chúng tôi luôn cố gắng và đồng hành cùng
                   khách hàng trên con đường tương lai phía trước.
