@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 type CardProps = {
   title: string;
+  slug: string;
   href: string;
   price?: string;
   note?: string;
@@ -11,10 +12,7 @@ type CardProps = {
 export const Card = ({ title, href, price, note, time }: CardProps) => {
   return (
     <div className="relative shadow-custom p-4 cursor-pointer group rounded-xl min-h-72 items-center flex">
-      <div className="absolute top-0 -left-60 h-32 w-full overflow-hidden rounded-lg z-[1] rotate-12">
-        <Image src={href + '-text.png'} alt={title} fill className="object-contain" />
-      </div>
-      <div className="w-full flex gap-4 bg-white overflow-hidden">
+      <div className="w-full flex gap-4 bg-white">
         <div className="relative h-48 w-full overflow-hidden rounded-lg z-0">
           <Image src={href + '.png'} alt={title} fill className="object-cover transform transition-transform duration-500 group-hover:scale-110 rounded-lg" />
         </div>

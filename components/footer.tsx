@@ -15,7 +15,7 @@ const items = [
 
 export const Footer = () => {
   return (
-    <footer className="bg-primary-50 text-center bg-secondary text-white lg:text-left mt-24">
+    <footer className="bg-primary-50 text-center bg-secondary text-white lg:text-left mt-48">
       <div className="mx-24 py-10 pt-16 text-center md:text-left">
         <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-12">
           <div className="col-span-3 px-2">
