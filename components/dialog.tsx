@@ -2,6 +2,7 @@ import { X } from 'lucide-react';
 import Image from 'next/image';
 import { ListDashed } from './list-dashed';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const items = [
   {
@@ -126,6 +127,7 @@ type DialogProps = {
 export const Dialog = ({ slug, setSlug }: DialogProps) => {
   const [item, setItem] = useState(items[0]);
   const { title, href, price, note, time, list } = item;
+  const router = useRouter()
 
   useEffect(() => {
     if (slug) {
@@ -245,10 +247,14 @@ export const Dialog = ({ slug, setSlug }: DialogProps) => {
                   </>
                 )}
               </div>
-              <div className="col-span-1">
-                <div className="relative h-96 w-full overflow-hidden rounded-lg z-0 -top-12">
+              <div className="col-span-1 flex flex-col items-center">
+                <div className="relative h-96 w-full overflow-hidden rounded-lg z-0 -top-8">
                   <Image src={href + '1.png'} alt={title} fill className="object-contain transform transition-transform duration-500 group-hover:scale-110 rounded-lg" />
                 </div>
+                <button onClick={() => router.push("/lien-he")} className="relative bg-primary w-44 h-12 text-white uppercase rounded-lg font-semibold hover:bg-dark-primary border-b-4 border-dark-primary mb-4" type="button">
+                  <div className="absolute border bg-primary opacity-50 rounded-lg top-1 right-6 w-32 h-10 animate-ping" />
+                  Liên hệ tư vấn
+                </button>
               </div>
             </div>
           </div>

@@ -65,7 +65,7 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div className="relative h-[12rem] w-full mt-32">
+          <div className="relative h-[12rem] lg:h-[15rem] w-full mt-32">
             <Image
               src="/images/gioi-thieu/3.png"
               alt=""

@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const Cam = () => {
   return (
-    <div className="absolute -top-12 right-0 max-w-fit mr-12">
+    <div className="max-w-fit relative ml-24 mt-12">
       <div className="bg-white rounded-2xl">
         <h3 className="uppercase font-semibold text-2xl py-2 mb-4 border-b-2 border-dashed border-primary">Cam Kết</h3>
         <div className="ml-4">
@@ -41,12 +41,13 @@ const Page = () => {
             </div>
           </div>
           <div className="relative grid grid-cols-2">
-            <div className="absolute top-32 -left-32 h-[600px] w-full overflow-hidden">
+            <div className="absolute top-64 left-0 h-[32rem] w-full overflow-hidden">
               <Image src="/images/xuat-khau-nhat/2.png" alt="" fill className="object-contain" />
             </div>
-            <div className="col-span-1"></div>
-            <div className="relative col-span-1 px-12 pt-16">
+            <div className="col-span-1">
               <Cam />
+            </div>
+            <div className="col-span-1 px-12 pt-16">
               <DecorTitle title="Điều kiện" />
               <p className="font-semibold">Trình độ:</p>
               <ListDashed
@@ -68,7 +69,7 @@ const Page = () => {
         </div>
 
         <div className="grid-1 grid grid-cols-2 mt-96">
-          <div className='col-span-1 px-12'>
+          <div className="col-span-1 px-12">
             <div className="flex flex-col gap-8">
               <div className="relative">
                 <h3 className="text-2xl font-semibold mb-12 text-left">1.2 diện Kỹ sư</h3>
@@ -111,7 +112,7 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div className='col-span-1 px-12'>
+          <div className="col-span-1 px-12">
             <div className="flex flex-col gap-8">
               <div className="relative">
                 <h3 className="text-2xl font-semibold mb-12 text-left">1.3 diện Tokutei</h3>

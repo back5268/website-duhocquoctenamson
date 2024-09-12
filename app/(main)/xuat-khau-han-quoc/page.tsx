@@ -2,7 +2,7 @@ import { Header } from '@/components/header';
 
 const Page = () => {
   return (
-    <div className="container lg:w-9/12 mt-24">
+    <div className="container lg:w-8/12 mt-24">
       <div className="flex flex-col gap-4 items-center justify-center w-full">
         <Header label="Xuất khẩu" hightlight="Hàn Quốc" />
 
