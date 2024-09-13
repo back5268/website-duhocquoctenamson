@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { useInView } from 'react-intersection-observer';
 import { abroads, labors } from '@/constants';
+import { motion } from 'framer-motion';
 
 const items = [
   {
@@ -81,13 +82,20 @@ const Home = () => {
         <div className="container lg:w-9/12">
           <div ref={ref} className="grid lg:grid-cols-4 grid-cols-2 mt-8 w-full px-8 lg:px-0">
             {items.map(({ amount, title, svg, prefix }, index) => (
-              <div key={index} className="col-span-1 flex flex-col items-center gap-2 shadow-md p-8 rounded-lg mx-4 my-4 bg-white">
+              <motion.div
+                initial={{ y: 300, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.25 + index * 0.5 }}
+                key={index}
+                className="col-span-1 flex flex-col items-center gap-2 shadow-md p-8 rounded-lg mx-4 my-4 bg-white"
+              >
                 <div className="bg-primary p-6 rounded-xl mb-2 border-b-4 border-dark-primary">{svg()}</div>
                 <h5 className="text-3xl font-semibold">
                   {inView ? <CountUp start={1} end={amount} duration={6} /> : 0} {prefix}
                 </h5>
-                <span>{title}</span>
-              </div>
+                <span className="text-center">{title}</span>
+              </motion.div>
             ))}
           </div>
         </div>

@@ -1,12 +1,15 @@
+"use client"
+
 import { DecorTitle } from '@/components/decor-title';
 import { Header } from '@/components/header';
 import { ListDashed } from '@/components/list-dashed';
 import { Check } from 'lucide-react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const Cam = () => {
   return (
-    <div className="max-w-fit relative ml-24 mt-12">
+    <motion.div initial={{ x: -100 }} whileInView={{ x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }} className="max-w-fit relative ml-24 mt-12">
       <div className="bg-white rounded-2xl">
         <h3 className="uppercase font-semibold text-2xl py-2 mb-4 border-b-2 border-dashed border-primary">Cam Kết</h3>
         <div className="ml-4">
@@ -20,7 +23,7 @@ const Cam = () => {
         <div className="absolute inset-y-0 -left-9 bg-primary w-8 rounded-full"></div>
         <div className="absolute inset-y-0 -left-8 bg-white w-8 rounded-2xl"></div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -33,17 +36,17 @@ const Page = () => {
         <div>
           <div className="relative ml-8">
             <h3 className="text-2xl font-semibold mb-12 text-left">1.1 diện thực tập sinh kỹ năng</h3>
-            <div className="absolute h-12 w-20 -top-4 -left-8 -z-10">
+            <motion.div initial={{ x: -100 }} whileInView={{ x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }} className="absolute h-12 w-20 -top-4 -left-8 -z-10">
               <Image src="/images/decor/decor2.png" alt="" fill className="object-contain" />
-            </div>
-            <div className="absolute h-32 w-96 top-0 left-16 -z-10">
+            </motion.div>
+            <motion.div initial={{ x: 100 }} whileInView={{ x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }} className="absolute h-32 w-96 top-0 left-16 -z-10">
               <Image src="/images/xuat-khau-nhat/ky-nang.png" alt="" fill className="object-contain" />
-            </div>
+            </motion.div>
           </div>
           <div className="relative grid grid-cols-1 lg:grid-cols-2">
-            <div className="absolute mt-[28rem] lg:mt-0 top-64 left-0 h-[32rem] w-full overflow-hidden">
+            <motion.div initial={{ scale: 0.5, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 1 }} className="absolute mt-[28rem] lg:mt-0 top-64 left-0 h-[32rem] w-full overflow-hidden">
               <Image src="/images/xuat-khau-nhat/2.png" alt="" fill className="object-contain" />
-            </div>
+            </motion.div>
             <div className="col-span-1">
               <Cam />
             </div>
@@ -68,17 +71,17 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="grid-1 grid grid-cols-1 lg:grid-cols-2 mt-96 lg:mt-64">
+        <div className="grid-1 grid grid-cols-1 lg:grid-cols-2 mt-96">
           <div className="col-span-1 px-12 py-16">
             <div className="flex flex-col gap-8">
               <div className="relative">
                 <h3 className="text-2xl font-semibold mb-12 text-left">1.2 diện Kỹ sư</h3>
-                <div className="absolute h-12 w-20 -top-4 -left-8 -z-10">
+                <motion.div initial={{ x: -100 }} whileInView={{ x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }} className="absolute h-12 w-20 -top-4 -left-8 -z-10">
                   <Image src="/images/decor/decor2.png" alt="" fill className="object-contain" />
-                </div>
-                <div className="absolute h-16 w-48 top-0 left-16 -z-10">
+                </motion.div>
+                <motion.div initial={{ x: 100 }} whileInView={{ x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }} className="absolute h-16 w-48 top-0 left-16 -z-10">
                   <Image src="/images/xuat-khau-nhat/dien-ky-su.png" alt="" fill className="object-contain" />
-                </div>
+                </motion.div>
               </div>
               <div>
                 <DecorTitle title="Điều kiện" />
@@ -116,12 +119,12 @@ const Page = () => {
             <div className="flex flex-col gap-8">
               <div className="relative">
                 <h3 className="text-2xl font-semibold mb-12 text-left">1.3 diện Tokutei</h3>
-                <div className="absolute h-12 w-20 -top-4 -left-8 -z-10">
+                <motion.div initial={{ x: -100 }} whileInView={{ x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }} className="absolute h-12 w-20 -top-4 -left-8 -z-10">
                   <Image src="/images/decor/decor2.png" alt="" fill className="object-contain" />
-                </div>
-                <div className="absolute h-16 w-48 top-0 left-16 -z-10">
+                </motion.div>
+                <motion.div initial={{ x: 100 }} whileInView={{ x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }} className="absolute h-16 w-48 top-0 left-16 -z-10">
                   <Image src="/images/xuat-khau-nhat/tokutei.png" alt="" fill className="object-contain" />
-                </div>
+                </motion.div>
               </div>
               <div>
                 <DecorTitle title="Điều kiện" />

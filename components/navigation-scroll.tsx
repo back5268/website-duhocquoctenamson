@@ -12,13 +12,13 @@ export const NavigationScroll = ({
   const pathname = usePathname();
 
   useEffect(() => {
-    const hash = window.location.hash;
-    if (!hash)
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth",
-      });
+    // const hash = window.location.hash;
+    // if (!hash)
+    //   window.scrollTo({
+    //     top: 0,
+    //     left: 0,
+    //     behavior: "smooth",
+    //   });
 
     const title = items.find(({ href }) => href === pathname)?.label;
     if (title) document.title = title;

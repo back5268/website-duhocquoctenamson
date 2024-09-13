@@ -1,8 +1,11 @@
+'use client';
+
 import { DecorTitle } from '@/components/decor-title';
 import { Header } from '@/components/header';
 import { ListDashed } from '@/components/list-dashed';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const koreas = [
   {
@@ -69,12 +72,12 @@ const Page = () => {
         <div className="relative w-full px-8 bg-white z-0 flex flex-col items-center">
           <div className="relative w-full mb-12">
             <h3 className="text-2xl font-semibold mb-12 text-left">Điều kiện theo học các trường Đại học ở Hàn Quốc</h3>
-            <div className="absolute h-12 w-20 -top-4 -left-8 -z-10">
+            <motion.div initial={{ x: -100 }} whileInView={{ x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }} className="absolute h-12 w-20 -top-4 -left-8 -z-10">
               <Image src="/images/decor/decor2.png" alt="" fill className="object-contain" />
-            </div>
-            <div className="absolute h-20 w-80 top-0 left-16 -z-10">
+            </motion.div>
+            <motion.div initial={{ x: 100 }} whileInView={{ x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }} className="absolute h-20 w-80 top-0 left-16 -z-10">
               <Image src="/images/du-hoc-han/dieu-kien.png" alt="" fill className="object-contain" />
-            </div>
+            </motion.div>
           </div>
 
           <div className="absolute -bottom-2 right-[15%] left-[15%] bg-primary p-1 rounded-b-3xl"></div>
@@ -84,8 +87,7 @@ const Page = () => {
                 <tr>
                   <td className="border-r-2 border-b-2 border-dashed border-primary text-center font-semibold lg:min-w-64">Một số trường Top</td>
                   <td className="relative border-b-2 border-l-2 border-dashed border-primary p-4 pt-8">
-                    <div className="absolute right-[50%] translate-x-[50%] -top-7 text-white bg-dark-primary h-12 w-32 rounded-3xl"></div>
-                    <div className="absolute right-[50%] translate-x-[50%] -top-8 text-white bg-primary h-12 w-32 flex justify-center items-center rounded-3xl border-light-primary border">
+                    <div className="absolute border-b-4 right-[50%] translate-x-[50%] -top-8 text-white bg-primary h-12 w-32 flex justify-center items-center rounded-3xl border-dark-primary">
                       <h2 className="text-lg font-semibold uppercase">TOP 1</h2>
                     </div>
                     <ul className="list-disc pl-5 leading-8">
@@ -96,8 +98,7 @@ const Page = () => {
                     </ul>
                   </td>
                   <td className="relative border-b-2 border-l-2 border-dashed border-primary p-4 pt-8">
-                    <div className="absolute right-[50%] translate-x-[50%] -top-7 text-white bg-dark-primary h-12 w-32 rounded-3xl"></div>
-                    <div className="absolute right-[50%] translate-x-[50%] -top-8 text-white bg-primary h-12 w-32 flex justify-center items-center rounded-3xl border-light-primary border">
+                    <div className="absolute right-[50%] translate-x-[50%] -top-8 text-white bg-primary h-12 w-32 flex justify-center items-center rounded-3xl border-dark-primary border-b-4">
                       <h2 className="text-lg font-semibold uppercase">TOP 2</h2>
                     </div>
                     <ul className="list-disc pl-5">
@@ -110,8 +111,7 @@ const Page = () => {
                     </ul>
                   </td>
                   <td className="relative border-b-2 border-l-2 border-dashed border-primary p-4 pt-8">
-                    <div className="absolute right-[50%] translate-x-[50%] -top-7 text-white bg-dark-primary h-12 w-32 rounded-3xl"></div>
-                    <div className="absolute right-[50%] translate-x-[50%] -top-8 text-white bg-primary h-12 w-32 flex justify-center items-center rounded-3xl border-light-primary border">
+                    <div className="absolute right-[50%] translate-x-[50%] -top-8 text-white bg-primary h-12 w-32 flex justify-center items-center rounded-3xl border-dark-primary border-b-4">
                       <h2 className="text-lg font-semibold uppercase">TOP 3</h2>
                     </div>
                     <ul className="list-disc pl-5">
@@ -159,12 +159,12 @@ const Page = () => {
         <div className="flex flex-col px-8 gap-12 justify-start w-full mt-12">
           <div className="relative">
             <h3 className="text-2xl font-semibold mb-12 text-left">2.1 Du học tiếng Hàn (Visa D4-1)</h3>
-            <div className="absolute h-12 w-20 -top-4 -left-8 -z-10">
+            <motion.div initial={{ x: -100 }} whileInView={{ x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }} className="absolute h-12 w-20 -top-4 -left-8 -z-10">
               <Image src="/images/decor/decor2.png" alt="" fill className="object-contain" />
-            </div>
-            <div className="absolute h-32 w-[20rem] lg:w-[28rem] top-0 left-16 -z-10">
+            </motion.div>
+            <motion.div initial={{ x: 100 }} whileInView={{ x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }} className="absolute h-32 w-[20rem] lg:w-[28rem] top-0 left-16 -z-10">
               <Image src="/images/du-hoc-han/visad4.png" alt="" fill className="object-contain" />
-            </div>
+            </motion.div>
           </div>
           <div>
             <DecorTitle title="Điều kiện ứng tuyển" />
@@ -192,21 +192,21 @@ const Page = () => {
               ]}
             />
           </div>
-          <div className="relative h-[25rem] w-full">
+          <motion.div initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="relative h-[25rem] w-full">
             <Image src="/images/du-hoc-han/1.png" alt="" fill className="object-contain" />
             <div id="visa-d2"></div>
-          </div>
+          </motion.div>
 
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 mt-0 lg:mt-24">
             <div className="col-span-1 px-8 flex flex-col gap-12">
               <div className="relative">
                 <h3 className="text-2xl font-semibold mb-12 text-left">2.2 Du học hệ Đại học (VISA D2)</h3>
-                <div className="absolute h-12 w-20 -top-4 -left-8 -z-10">
+                <motion.div initial={{ x: -100 }} whileInView={{ x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }} className="absolute h-12 w-20 -top-4 -left-8 -z-10">
                   <Image src="/images/decor/decor2.png" alt="" fill className="object-contain" />
-                </div>
-                <div className="absolute h-32 w-[16rem] lg:w-[28rem] top-0 left-16 -z-10">
+                </motion.div>
+                <motion.div initial={{ x: 100 }} whileInView={{ x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }} className="absolute h-32 w-[16rem] lg:w-[28rem] top-0 left-16 -z-10">
                   <Image src="/images/du-hoc-han/he-dai-hoc.png" alt="" fill className="object-contain" />
-                </div>
+                </motion.div>
               </div>
               <div>
                 <DecorTitle title="Điều kiện ứng tuyển" />
@@ -251,9 +251,15 @@ const Page = () => {
               </div>
             </div>
             <div className="col-span-1 px-6">
-              <div className="relative h-[600px] w-full mt-0 lg:mt-32">
+              <motion.div
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="relative h-[600px] w-full mt-0 lg:mt-32"
+              >
                 <Image src="/images/du-hoc-han/2.png" alt="" fill className="object-contain" />
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

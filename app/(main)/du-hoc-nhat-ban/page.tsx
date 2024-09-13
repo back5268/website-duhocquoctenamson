@@ -1,9 +1,12 @@
+"use client"
+
 import { CalligraphyTitle } from '@/components/calligraphy-title';
 import { DecorTitle } from '@/components/decor-title';
 import { Header } from '@/components/header';
 import { ListDashed } from '@/components/list-dashed';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const japans = [
   {
@@ -110,18 +113,18 @@ const Page = () => {
                 </div>
 
                 <div className="relative w-full">
-                  <div className="absolute h-10 w-56 -top-2 -right-0 z-0">
+                  <motion.div initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="absolute h-10 w-56 -top-2 -right-0 z-0">
                     <Image src="/images/du-hoc-nhat/2.png" alt="" fill className="object-contain" />
-                  </div>
+                  </motion.div>
                   <DecorTitle title="Chi phí" href="/images/du-hoc-nhat/chi-phi.png" />
                   <ListDashed list={['Chi phí hoàn thiện hồ sơ', 'Chi phí học tiếng Nhật tại Việt Nam', 'Vé máy bay Việt Nam - Nhật Bản', 'Chi phí chứng thực bằng cấp và xin Visa']} />
                 </div>
               </div>
             </div>
             <div className="col-span-1 px-12 flex flex-col w-full">
-              <div className="relative h-[36rem] w-full z-0 mt-8 lg:-mt-12">
+              <motion.div initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="relative h-[36rem] w-full z-0 mt-8 lg:-mt-12">
                 <Image src="/images/du-hoc-nhat/3.png" alt="" fill className="object-contain" />
-              </div>
+              </motion.div>
             </div>
           </div>
 
@@ -139,9 +142,9 @@ const Page = () => {
               />
               <div id="hoc-bong-bao"></div>
             </div>
-            <div className="col-span-1 lg:order-1 relative h-[24rem] w-full z-0">
+            <motion.div initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="col-span-1 lg:order-1 relative h-[24rem] w-full z-0">
               <Image src="/images/du-hoc-nhat/1.png" alt="" fill className="object-contain" />
-            </div>
+            </motion.div>
           </div>
         </div>
 
@@ -198,9 +201,9 @@ const Page = () => {
               </div>
             </div>
             <div className="col-span-1 w-full flex flex-col">
-              <div className="relative h-[36rem] w-full z-0 mt-12">
+              <motion.div initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="relative h-[36rem] w-full z-0 mt-12">
                 <Image src="/images/du-hoc-nhat/4.png" alt="" fill className="object-contain" />
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -210,9 +213,9 @@ const Page = () => {
             <CalligraphyTitle title="1.3 Học Bổng Nhà Hàng" href="/images/du-hoc-nhat/hoc-bong-nha-hang.png" />
           </div>
           <div className="w-full flex justify-center">
-            <div className="relative h-80 w-full z-0 flex justify-center">
+            <motion.div initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="relative h-80 w-full z-0 flex justify-center">
               <Image src="/images/du-hoc-nhat/5.png" alt="" fill className="object-contain" />
-            </div>
+            </motion.div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 mt-12">
@@ -264,9 +267,9 @@ const Page = () => {
               </div>
             </div>
             <div className="col-span-1 flex flex-col w-full">
-              <div className="relative h-[32rem] w-full z-0 mt-12 lg:mt-48">
+              <motion.div initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="relative h-[32rem] w-full z-0 mt-12 lg:mt-48">
                 <Image src="/images/du-hoc-nhat/6.png" alt="" fill className="object-contain" />
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -323,9 +326,9 @@ const Page = () => {
             </div>
             <div className="col-span-1 lg:order-1">
               <div className="flex flex-col w-full">
-                <div className="relative h-[28rem] w-full z-0 mt-24">
+                <motion.div initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="relative h-[28rem] w-full z-0 mt-24">
                   <Image src="/images/du-hoc-nhat/7.png" alt="" fill className="object-contain" />
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>

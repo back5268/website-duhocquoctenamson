@@ -1,11 +1,15 @@
-import { Header } from '@/components/header';
 import { locations } from '@/constants';
 
 const Page = () => {
   return (
     <div className="container lg:w-9/12 mt-24">
       <div className="flex flex-col gap-4 items-center justify-center w-full">
-        <Header label="Liên hệ với" hightlight="Nam Sơn" />
+        <div className="w-full text-center">
+          <h1 className="text-3xl font-semibold uppercase text-secondary mb-4">
+            Liên hệ với <span className="text-dark-primary">Nam Sơn</span>
+          </h1>
+          <hr />
+        </div>
         <div className="flex flex-wrap w-full mt-8 py-8">
           <div className="w-full lg:w-1/2 px-4">
             {locations.map(({ label, children }, index) => (

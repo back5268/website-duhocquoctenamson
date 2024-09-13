@@ -5,6 +5,7 @@ import Link from 'next/link';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { motion } from 'framer-motion';
 
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -21,11 +22,11 @@ type CarouselMenuProps = {
 
 export const CarouselMenu = ({ items }: CarouselMenuProps) => {
   return (
-    <div className="w-full px-16 lg:px-0">
+    <motion.div initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 1 }} className="w-full px-16 lg:px-0">
       <Swiper
         navigation={true}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         loop={true}
         modules={[Pagination, Navigation, Autoplay]}
         breakpoints={{
@@ -60,6 +61,6 @@ export const CarouselMenu = ({ items }: CarouselMenuProps) => {
           );
         })}
       </Swiper>
-    </div>
+    </motion.div>
   );
 };

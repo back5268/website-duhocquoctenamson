@@ -58,11 +58,14 @@ body {
 .swiper-button-next::after,
 .swiper-button-prev::after {
   display: none;
-  /* Ẩn icon mặc định */
 }
 
 .swiper-pagination-bullet-active {
   background-color: white !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #0FB2E5 !important;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

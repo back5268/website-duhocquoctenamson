@@ -1,10 +1,13 @@
-import { Header } from '@/components/header';
-
 const Page = () => {
   return (
     <div className="container lg:w-8/12 mt-24">
       <div className="flex flex-col gap-4 items-center justify-center w-full">
-        <Header label="Xuất khẩu" hightlight="Hàn Quốc" />
+        <div className="w-full text-center">
+          <h1 className="text-3xl font-semibold uppercase text-secondary mb-4">
+            Xuất khẩu <span className="text-dark-primary">Hàn Quốc</span>
+          </h1>
+          <hr />
+        </div>
 
         <div className="relative w-full p-6 bg-white mt-12 z-0">
           <div className="absolute right-[50%] translate-x-[50%] top-0 text-white bg-dark-primary h-12 w-72 rounded-3xl"></div>

@@ -4,6 +4,7 @@ import { Card } from '@/components/card';
 import { Dialog } from '@/components/dialog';
 import { Header } from '@/components/header';
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 const items = [
   {
@@ -74,11 +75,11 @@ const Page = () => {
 
         <div className="flex flex-wrap items-start w-full">
           {items.map(({ title, href, price, time, note, slug }, index) => (
-            <div className="w-full lg:w-1/2 px-8 py-8" key={index}>
+            <motion.div initial={{ y: 200 }} whileInView={{ y: 0 }} viewport={{ once: true }} transition={{ duration: 1 }} className="w-full lg:w-1/2 px-8 py-8" key={index}>
               <div onClick={() => setSlug(slug)}>
                 <Card title={title} href={href} price={price} time={time} note={note} slug={slug} />
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
