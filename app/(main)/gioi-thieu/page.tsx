@@ -7,14 +7,14 @@ const Page = () => {
       <div className="flex flex-col gap-4 items-center justify-center w-full">
         <Header label="Giới Thiệu Về" hightlight="Nam Sơn" />
         <div className="flex flex-col gap-12 items-center justify-center">
-          <div className="flex">
-            <div className="w-1/2 px-12 flex justify-center">
+          <div className="flex flex-wrap">
+            <div className="w-full lg:w-1/2 px-12 flex justify-center">
               <div className="relative w-full h-[28rem]">
                 <Image
                   src="/images/gioi-thieu/2.png"
                   alt=""
                   fill
-                  className="object-contain translate-y-32"
+                  className="object-contain translate-y-16 lg:translate-y-32"
                 />
 
                 <div className="absolute top-0 left-0 w-full h-96 m-auto inset-0">
@@ -27,7 +27,7 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div className="w-1/2 pl-12 pt-24 text-lg px-8">
+            <div className="w-full lg:w-1/2 pl-12 pt-24 text-lg px-16">
               <p className="mb-12">
                 Được thành lập vào năm 2022, Nam Sơn là công ty chuyên sâu cung
                 cấp dịch vụ tư vấn và hỗ trợ về Du học và Xuất khẩu lao động các
@@ -65,7 +65,7 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div className="relative h-[12rem] lg:h-[15rem] w-full mt-32">
+          <div className="relative h-[6rem] lg:h-[15rem] w-full mt-16 lg:mt-32">
             <Image
               src="/images/gioi-thieu/3.png"
               alt=""
@@ -74,8 +74,8 @@ const Page = () => {
             />
           </div>
 
-          <div className="flex mt-24">
-            <div className="w-1/2 px-16">
+          <div className="flex flex-wrap mt-8">
+            <div className="w-full lg:w-1/2 p-16">
               <div className="relative">
                 <h3 className="text-2xl font-semibold mb-12 text-left">
                   Thành tích
@@ -107,7 +107,7 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div className="w-1/2 px-16">
+            <div className="w-full lg:w-1/2 p-16">
               <div className="relative">
                 <h3 className="text-2xl font-semibold mb-12 text-left">
                   Tầm nhìn

@@ -17,7 +17,7 @@ const items = [
 
 export const Carousel = () => {
   return (
-    <div className="h-[36rem] w-full relative">
+    <div className="w-full relative">
       <div className="absolute z-10 top-[50%] translate-y-[-50%] cursor-pointer pointer-events-none hover:bg-white"></div>
       <Swiper
         navigation={true}
@@ -30,7 +30,7 @@ export const Carousel = () => {
         {items.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <div className="relative h-[36rem] bg-slate-500">
+              <div className="relative h-80 md:h-[36rem] bg-slate-500">
                 <Image
                   src={item}
                   alt="Logo"

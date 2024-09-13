@@ -4,7 +4,7 @@ export const PhoneSection = () => {
   return (
     <Link
       href="tel:+84923451999"
-      className="flex items-center justify-center md:justify-start"
+      className="flex items-center justify-center lg:justify-start"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

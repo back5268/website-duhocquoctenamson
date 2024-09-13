@@ -40,8 +40,8 @@ const Page = () => {
               <Image src="/images/xuat-khau-nhat/ky-nang.png" alt="" fill className="object-contain" />
             </div>
           </div>
-          <div className="relative grid grid-cols-2">
-            <div className="absolute top-64 left-0 h-[32rem] w-full overflow-hidden">
+          <div className="relative grid grid-cols-1 lg:grid-cols-2">
+            <div className="absolute mt-[28rem] lg:mt-0 top-64 left-0 h-[32rem] w-full overflow-hidden">
               <Image src="/images/xuat-khau-nhat/2.png" alt="" fill className="object-contain" />
             </div>
             <div className="col-span-1">
@@ -68,8 +68,8 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="grid-1 grid grid-cols-2 mt-96">
-          <div className="col-span-1 px-12">
+        <div className="grid-1 grid grid-cols-1 lg:grid-cols-2 mt-96 lg:mt-64">
+          <div className="col-span-1 px-12 py-16">
             <div className="flex flex-col gap-8">
               <div className="relative">
                 <h3 className="text-2xl font-semibold mb-12 text-left">1.2 diện Kỹ sư</h3>
@@ -112,7 +112,7 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-1 px-12">
+          <div className="col-span-1 px-12 py-16">
             <div className="flex flex-col gap-8">
               <div className="relative">
                 <h3 className="text-2xl font-semibold mb-12 text-left">1.3 diện Tokutei</h3>

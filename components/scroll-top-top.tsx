@@ -40,7 +40,7 @@ export const ScrollToTop = () => {
         aria-hidden="true"
         focusable="false"
         data-prefix="fas"
-        className="w-5 h-5"
+        className="w-[24px] h-[24px]"
         type="img"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 448 512"

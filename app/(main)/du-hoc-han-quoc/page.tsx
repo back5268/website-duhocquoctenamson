@@ -55,7 +55,7 @@ const Page = () => {
             {koreas.map(({ label, href, svg }, index) => (
               <Link href={href} key={index} className="py-8 text-lg flex items-center justify-center gap-4 text-white">
                 {svg()}
-                <span>{label}</span>
+                <span className="hidden lg:block">{label}</span>
               </Link>
             ))}
           </div>
@@ -82,7 +82,7 @@ const Page = () => {
             <table className="table-auto w-full border-collapse leading-8">
               <tbody>
                 <tr>
-                  <td className="border-r-2 border-b-2 border-dashed border-primary text-center font-semibold min-w-64">Một số trường Top</td>
+                  <td className="border-r-2 border-b-2 border-dashed border-primary text-center font-semibold lg:min-w-64">Một số trường Top</td>
                   <td className="relative border-b-2 border-l-2 border-dashed border-primary p-4 pt-8">
                     <div className="absolute right-[50%] translate-x-[50%] -top-7 text-white bg-dark-primary h-12 w-32 rounded-3xl"></div>
                     <div className="absolute right-[50%] translate-x-[50%] -top-8 text-white bg-primary h-12 w-32 flex justify-center items-center rounded-3xl border-light-primary border">
@@ -145,8 +145,7 @@ const Page = () => {
                     3 năm cấp 3 <b>từ 6.0 trở lên</b>.
                   </td>
                 </tr>
-                <div id="visa-d4"></div>
-                <tr>
+                <tr id="visa-d4">
                   <td className="border-r-2 border-t-2 border-dashed border-primary text-center font-semibold">Bạn cần</td>
                   <td className="border-t-2 border-l-2 border-dashed border-primary p-4" colSpan={3}>
                     Học tiếng Hàn 3 – 4 tháng trước khi bay hoặc phải vượt qua kiểm tra tiếng Hàn.
@@ -163,7 +162,7 @@ const Page = () => {
             <div className="absolute h-12 w-20 -top-4 -left-8 -z-10">
               <Image src="/images/decor/decor2.png" alt="" fill className="object-contain" />
             </div>
-            <div className="absolute h-32 w-[28rem] top-0 left-16 -z-10">
+            <div className="absolute h-32 w-[20rem] lg:w-[28rem] top-0 left-16 -z-10">
               <Image src="/images/du-hoc-han/visad4.png" alt="" fill className="object-contain" />
             </div>
           </div>
@@ -193,19 +192,19 @@ const Page = () => {
               ]}
             />
           </div>
-          <div className="relative h-[400px] w-full">
+          <div className="relative h-[25rem] w-full">
             <Image src="/images/du-hoc-han/1.png" alt="" fill className="object-contain" />
             <div id="visa-d2"></div>
           </div>
 
-          <div className="w-full grid grid-cols-2 mt-24">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-2 mt-0 lg:mt-24">
             <div className="col-span-1 px-8 flex flex-col gap-12">
               <div className="relative">
                 <h3 className="text-2xl font-semibold mb-12 text-left">2.2 Du học hệ Đại học (VISA D2)</h3>
                 <div className="absolute h-12 w-20 -top-4 -left-8 -z-10">
                   <Image src="/images/decor/decor2.png" alt="" fill className="object-contain" />
                 </div>
-                <div className="absolute h-32 w-[28rem] top-0 left-16 -z-10">
+                <div className="absolute h-32 w-[16rem] lg:w-[28rem] top-0 left-16 -z-10">
                   <Image src="/images/du-hoc-han/he-dai-hoc.png" alt="" fill className="object-contain" />
                 </div>
               </div>
@@ -252,7 +251,7 @@ const Page = () => {
               </div>
             </div>
             <div className="col-span-1 px-6">
-              <div className="relative h-[600px] w-full mt-32">
+              <div className="relative h-[600px] w-full mt-0 lg:mt-32">
                 <Image src="/images/du-hoc-han/2.png" alt="" fill className="object-contain" />
               </div>
             </div>

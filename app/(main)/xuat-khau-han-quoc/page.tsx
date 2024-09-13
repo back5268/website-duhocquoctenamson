@@ -16,7 +16,7 @@ const Page = () => {
             <table className="table-auto w-full border-collapse leading-8">
               <tbody>
                 <tr>
-                  <td className="border-r-2 border-b-2 border-dashed border-primary text-center font-semibold min-w-64">Yêu Cầu</td>
+                  <td className="border-r-2 border-b-2 border-dashed border-primary text-center font-semibold lg:min-w-64">Yêu Cầu</td>
                   <td className="border-b-2 border-l-2 border-dashed border-primary p-8">
                     <ul className="list-disc pl-5">
                       <li>Người có độ tuổi từ 18 – 39 tuổi, tùy vào từng loại visa lao động cụ thể sẽ có yêu cầu về độ tuổi khác nhau;</li>

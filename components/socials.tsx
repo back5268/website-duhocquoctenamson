@@ -14,7 +14,7 @@ export const Socials = () => {
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
             y="0px"
-            className="w-9 h-9"
+            className="w-[36px] h-[36px]"
             viewBox="0 0 48 48"
           >
             <linearGradient
@@ -51,7 +51,7 @@ export const Socials = () => {
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
             y="0px"
-            className="w-9 h-9"
+            className="w-[36px] h-[36px]"
             viewBox="0 0 48 48"
           >
             <path

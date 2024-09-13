@@ -1,15 +1,16 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export const Logo = () => {
   return (
-    <div className="relative h-14 w-[4.5rem]">
+    <Link href="/" className="relative h-14 w-[4.5rem]">
       <Image
         src="/icons/logo.svg"
         alt="Logo"
         fill
-        className="object-cover"
+        className="object-contain"
         priority
       />
-    </div>
+    </Link>
   );
 };

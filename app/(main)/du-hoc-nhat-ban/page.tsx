@@ -69,7 +69,7 @@ const Page = () => {
             {japans.map(({ label, href, svg }, index) => (
               <Link href={href} key={index} className="py-8 text-lg flex items-center justify-center gap-4 text-white">
                 {svg}
-                <span>{label}</span>
+                <span className="hidden lg:block">{label}</span>
               </Link>
             ))}
           </div>
@@ -83,7 +83,7 @@ const Page = () => {
           <div className="pl-6">
             <CalligraphyTitle title="1.1 Du Học Tự Túc" href="/images/du-hoc-nhat/du-hoc-tu-tuc.png" />
           </div>
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="col-span-1 px-12">
               <div className="flex flex-col gap-12">
                 <div>
@@ -119,17 +119,14 @@ const Page = () => {
               </div>
             </div>
             <div className="col-span-1 px-12 flex flex-col w-full">
-              <div className="relative h-[36rem] w-full z-0 -mt-12">
+              <div className="relative h-[36rem] w-full z-0 mt-8 lg:-mt-12">
                 <Image src="/images/du-hoc-nhat/3.png" alt="" fill className="object-contain" />
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 mt-8">
-            <div className="col-span-1 relative h-[24rem] w-full z-0">
-              <Image src="/images/du-hoc-nhat/1.png" alt="" fill className="object-contain" />
-            </div>
-            <div className="col-span-1 relative w-full px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 mt-8">
+            <div className="col-span-1 lg:order-2 relative w-full px-12">
               <DecorTitle title="Cam kết" href="/images/du-hoc-nhat/cam-ket.png" />
               <ListDashed
                 list={[
@@ -142,6 +139,9 @@ const Page = () => {
               />
               <div id="hoc-bong-bao"></div>
             </div>
+            <div className="col-span-1 lg:order-1 relative h-[24rem] w-full z-0">
+              <Image src="/images/du-hoc-nhat/1.png" alt="" fill className="object-contain" />
+            </div>
           </div>
         </div>
 
@@ -149,7 +149,7 @@ const Page = () => {
           <div className="pl-8">
             <CalligraphyTitle title="1.2 Du Học Học Bổng Báo" href="/images/du-hoc-nhat/hoc-bong-bao.png" />
           </div>
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="col-span-1 px-12 flex flex-col gap-12">
               <div>
                 <DecorTitle title="Điều kiện" />
@@ -215,7 +215,7 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 mt-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 mt-12">
             <div className="col-span-1 px-12 flex flex-col gap-12">
               <div className="relative w-full leading-8">
                 <DecorTitle title="Chế độ học bổng của nhà hàng" />
@@ -264,7 +264,7 @@ const Page = () => {
               </div>
             </div>
             <div className="col-span-1 flex flex-col w-full">
-              <div className="relative h-[32rem] w-full z-0 mt-48">
+              <div className="relative h-[32rem] w-full z-0 mt-12 lg:mt-48">
                 <Image src="/images/du-hoc-nhat/6.png" alt="" fill className="object-contain" />
               </div>
             </div>
@@ -272,16 +272,9 @@ const Page = () => {
         </div>
 
         <div className="flex flex-col gap-8">
-          <div className="grid grid-cols-2">
-            <div className="col-span-1">
-              <div className="flex flex-col w-full">
-                <div className="relative h-[28rem] w-full z-0 mt-24">
-                  <Image src="/images/du-hoc-nhat/7.png" alt="" fill className="object-contain" />
-                </div>
-              </div>
-            </div>
-            <div className="col-span-1 px-12 flex flex-col gap-12">
-              <CalligraphyTitle title="1.2 Du Học Học Bổng Điều Dưỡng" href="/images/du-hoc-nhat/hoc-bong-dieu-duong.png" />
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div className="col-span-1 lg:order-2 px-12 flex flex-col gap-12">
+              <CalligraphyTitle title="1.4 Du Học Học Bổng Điều Dưỡng" href="/images/du-hoc-nhat/hoc-bong-dieu-duong.png" />
               <div>
                 <DecorTitle title="Điều kiện" />
                 <ListDashed
@@ -326,6 +319,13 @@ const Page = () => {
                     'Sau khi hoàn thành chương trình học sẽ làm việc tại bệnh viện, viện dưỡng lão hàng đầu của đất nước. Cơ hội tìm việc làm với mức lương cao và định cư tại Nhật.'
                   ]}
                 />
+              </div>
+            </div>
+            <div className="col-span-1 lg:order-1">
+              <div className="flex flex-col w-full">
+                <div className="relative h-[28rem] w-full z-0 mt-24">
+                  <Image src="/images/du-hoc-nhat/7.png" alt="" fill className="object-contain" />
+                </div>
               </div>
             </div>
           </div>

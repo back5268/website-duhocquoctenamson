@@ -138,10 +138,10 @@ export const Dialog = ({ slug, setSlug }: DialogProps) => {
 
   return (
     <>
-      <div className={`fixed inset-x-0 inset-y-0 z-50  bg-black bg-opacity-60 ${Boolean(slug) ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}></div>
+      <div onClick={() => setSlug('')} className={`fixed inset-x-0 inset-y-0 z-50  bg-black bg-opacity-60 ${Boolean(slug) ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}></div>
       <div className={`fixed inset-x-0 inset-y-0 z-50 flex justify-center rounded-xl ${Boolean(slug) ? '' : 'pointer-events-none'}`}>
         <div
-          className={`w-[1200px] h-fit bg-slate-100 shadow-custom rounded-xl transition-all p-6 mt-8 transform duration-300 ease-in-out ${
+          className={`w-[1200px] mx-8 h-fit bg-slate-100 shadow-custom rounded-xl transition-all p-6 mt-8 transform duration-300 ease-in-out ${
             Boolean(slug) ? 'opacity-100 translate-y-0' : '-translate-y-12 opacity-0 pointer-events-none'
           }`}
         >
@@ -154,7 +154,7 @@ export const Dialog = ({ slug, setSlug }: DialogProps) => {
           <hr />
 
           <div className="col-span-2 flex flex-col gap-4 my-8 max-h-[40rem] overflow-scroll overflow-x-hidden">
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="col-span-1 px-12">
                 {slug === 'hungary' ? (
                   <>

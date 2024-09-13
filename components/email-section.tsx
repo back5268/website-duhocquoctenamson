@@ -4,7 +4,7 @@ export const EmailSection = () => {
   return (
     <Link
       href="mailto:duhocquoctenamson@gmail.com"
-      className="flex items-center justify-center md:justify-start"
+      className="flex items-center justify-center lg:justify-start"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

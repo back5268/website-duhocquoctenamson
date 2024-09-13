@@ -48,7 +48,7 @@ export const Topbar = ({
         <div className="absolute left-4 top-[50%] -translate-y-[50%] z-20 block lg:hidden">
           <Menu
             onClick={() => setShowSidebar(true)}
-            className="cursor-pointer h-8 w-8"
+            className="cursor-pointer h-8 w-8 text-dark-primary"
           />
         </div>
         <div className="container h-full">

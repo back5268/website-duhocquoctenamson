@@ -74,7 +74,7 @@ const Page = () => {
 
         <div className="flex flex-wrap items-start w-full">
           {items.map(({ title, href, price, time, note, slug }, index) => (
-            <div className="w-1/2 px-8 py-8" key={index}>
+            <div className="w-full lg:w-1/2 px-8 py-8" key={index}>
               <div onClick={() => setSlug(slug)}>
                 <Card title={title} href={href} price={price} time={time} note={note} slug={slug} />
               </div>

@@ -6,10 +6,10 @@ const Page = () => {
     <div className="container lg:w-9/12 mt-24">
       <div className="flex flex-col gap-4 items-center justify-center w-full">
         <Header label="Liên hệ với" hightlight="Nam Sơn" />
-        <div className="flex w-full mt-8">
-          <div className="w-1/2 px-4">
+        <div className="flex flex-wrap w-full mt-8 py-8">
+          <div className="w-full lg:w-1/2 px-4">
             {locations.map(({ label, children }, index) => (
-              <div key={index} className="max-w-[30rem] mb-8">
+              <div key={index} className="lg:max-w-[32rem] mb-8">
                 <h4 className="font-semibold text-dark-primary mb-4 border-b-2 pb-2">{label}</h4>
                 {children.map(({ label, prefix, prefix2 }, iz) => (
                   <div key={iz} className="my-2">
@@ -24,21 +24,21 @@ const Page = () => {
               </div>
             ))}
           </div>
-          <div className="w-1/2 px-4">
+          <div className="w-full lg:w-1/2 px-4 py-8">
             <form className="w-full">
-              <div className="flex flex-wrap mb-6">
-                <div className="w-full md:w-1/2 px-2">
+              <div className="flex flex-wrap">
+                <div className="w-full md:w-1/2 px-2 mb-6">
                   <input className="custom-input" id="name" placeholder="Họ tên" />
                 </div>
-                <div className="w-full md:w-1/2 px-2">
+                <div className="w-full md:w-1/2 px-2 mb-6">
                   <input className="custom-input" id="phone" placeholder="Số điện thoại" />
                 </div>
               </div>
-              <div className="flex flex-wrap mb-6">
-                <div className="w-full md:w-1/2 px-2">
+              <div className="flex flex-wrap">
+                <div className="w-full md:w-1/2 px-2 mb-6">
                   <input className="custom-input" id="address" placeholder="Địa chỉ" />
                 </div>
-                <div className="w-full md:w-1/2 px-2">
+                <div className="w-full md:w-1/2 px-2 mb-6">
                   <input className="custom-input" id="email" placeholder="Email" />
                 </div>
               </div>
